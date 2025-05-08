@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chatbot Hỗ Trợ Sinh Viên</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>Chatbot Hỗ Trợ Học Tập</h2>
+    </div>
+    <div class="chat-window" id="chat-window">
+      <!-- Tin nhắn sẽ được hiển thị ở đây -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-message" placeholder="Nhập câu hỏi của bạn...">
+      <button id="send-btn">Gửi</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  
+
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '6815b4eda4c58339fde89935' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production',
+            voice: {
+              url: "https://runtime-api.voiceflow.com"
+            }
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+
+  
+</body>
+</html>
